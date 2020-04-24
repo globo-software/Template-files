@@ -3,10 +3,8 @@
 Hi {{ customer.first_name }}, 
 {% if attributes['Shipping Method'] == "Store Pickup" %}
 we're getting your order ready for collection.
-{% elsif attributes['Shipping Method'] == "Local Delivery" %}
-we're getting your order ready to be delivered. We will notify you when it has been sent.
-{% elsif requires_shipping %}
-we're getting your order ready to be shipped. We will notify you when it has been sent.
+{% else %}
+we're getting your order ready to be {% if attributes['Shipping Method'] == "Local Delivery" %}delivered{% elsif requires_shipping %}shipped{% endif %}. We will notify you when it has been sent.
 {% endif %}
 {% endcapture %}
 
