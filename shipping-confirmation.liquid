@@ -12,7 +12,6 @@
     {% if length == 10 %}{% assign format = '%A, %B %e, %Y' %}{% endif %}
     <p>Pickup Date: {{attributes["Pickup date"] | date: format}}</p>
     {% endif %}
-    {% endif %}
   {% endcapture %}
 
 {% else %}
