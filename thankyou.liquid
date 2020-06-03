@@ -20,7 +20,7 @@
       <div style="margin-top: 10px">
         <ul>
           <li><strong>Postal code</strong>: {{attributes["Postal code"]}}</li>
-          {% if attributes["Receipt date"] %}<li><strong>Receipt Date</strong>: {{attributes["Receipt date"] | date: format}}</li>{% endif %}
+          {% if attributes["Receipt date"] %}<li><strong>Delivery date</strong>: {{attributes["Receipt date"] | date: format}}</li>{% endif %}
         </ul>
       </div>
     {% endif %}
