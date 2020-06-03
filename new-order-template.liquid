@@ -54,7 +54,7 @@
 {% assign format = '%A, %B %e, %Y at %I:%M %P' %}
 {% assign length = attributes["Receipt date"].sizes %}
 {% if length == 10 %}{% assign format = '%A, %B %e, %Y' %}{% endif %}
-<p>Receipt Date: {{attributes["Receipt date"] | date: format}}</p>
+<p>Delivery date: {{attributes["Receipt date"] | date: format}}</p>
 {% endif %}
 {% endif %}
 <p></p>
