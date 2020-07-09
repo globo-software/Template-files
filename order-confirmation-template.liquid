@@ -417,7 +417,7 @@ we're getting your order ready to be {% if attributes['Shipping Method'] == "Loc
                               {{ shipping_address | format_address }}
                               {% if attributes["Receipt date"] %}
                               {% assign format = '%A, %B %e, %Y at %I:%M %P' %}
-                              {% assign length = attributes["Receipt date"].sizes %}
+                              {% assign length = attributes["Receipt date"] | sizes %}
                               {% if length == 10 %}{% assign format = '%A, %B %e, %Y' %}{% endif %}
                               <p>Delivery date: {{attributes["Receipt date"] | date: format}}</p>
                               {% endif %}
@@ -430,7 +430,7 @@ we're getting your order ready to be {% if attributes['Shipping Method'] == "Loc
                                 <p>Store address: {{attributes["Store address"]}}</p>
                                 {% if attributes["Pickup date"] %}
                                 {% assign format = '%A, %B %e, %Y at %I:%M %P' %}
-                                {% assign length = attributes["Pickup date"].sizes %}
+                                {% assign length = attributes["Pickup date"] | sizes %}
                                 {% if length == 10 %}{% assign format = '%A, %B %e, %Y' %}{% endif %}
                                 <p>Pickup Date: {{attributes["Pickup date"] | date: format}}</p>
                                 {% endif %}
