@@ -3,7 +3,7 @@
   {% assign format = '%A, %B %e, %Y at %I:%M %P' %}
   <div style="background: #fff;background-clip: padding-box;border: 1px solid #d9d9d9;border-radius: 5px;color: #545454;padding: 16px;margin-top: 30px;margin-bottom: -2em;">
     {% if attributes['Shipping Method'] == 'Store Pickup' %}
-      {% assign length = attributes["Pickup date"].sizes %}
+      {% assign length = attributes["Pickup date"] | sizes %}
       {% if length == 10 %}{% assign format = '%A, %B %e, %Y' %}{% endif %}
       <h2 style="color:#333333;font-size:18px;line-height:23px">Store pickup infomation</h2>
       <div style="margin-top: 10px">
@@ -14,7 +14,7 @@
         </ul>
       </div>
     {% elsif attributes['Shipping Method'] == 'Local Delivery' %}
-      {% assign length = attributes["Receipt date"].sizes %}
+      {% assign length = attributes["Receipt date"] | sizes %}
       {% if length == 10 %}{% assign format = '%A, %B %e, %Y' %}{% endif %}
       <h2 style="color:#333333;font-size:18px;line-height:23px">Local delivery infomation</h2>
       <div style="margin-top: 10px">
