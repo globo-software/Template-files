@@ -52,7 +52,7 @@
 <p>Postal code: {{attributes["Postal code"]}}</p>
 {% if attributes["Receipt date"] %}
 {% assign format = '%A, %B %e, %Y at %I:%M %P' %}
-{% assign length = attributes["Receipt date"] | sizes %}
+{% assign length = attributes["Receipt date"] | size %}
 {% if length == 10 %}{% assign format = '%A, %B %e, %Y' %}{% endif %}
 <p>Delivery date: {{attributes["Receipt date"] | date: format}}</p>
 {% endif %}
@@ -65,7 +65,7 @@
 <p>Store address: {{attributes["Store address"]}}</p>
 {% if attributes["Pickup date"] %}
 {% assign format = '%A, %B %e, %Y at %I:%M %P' %}
-{% assign length = attributes["Pickup date"] | sizes %}
+{% assign length = attributes["Pickup date"] | size %}
 {% if length == 10 %}{% assign format = '%A, %B %e, %Y' %}{% endif %}
 <p>Pickup Date: {{attributes["Pickup date"] | date: format}}</p>
 {% endif %}
